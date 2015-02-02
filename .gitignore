@@ -1,0 +1,46 @@
+*.orig
+*.swp
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore database schema
+/db/schema.rb
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore IDE stuff
+.idea/
+
+# Ignore .rvmrc
+.rvmrc
+.ruby-version
+.ruby-gemset
+
+# Ignore public
+/public/system/**
+
+# Mac stuff
+.DS_Store
+
+# CTAGS
+tags
+
+vendor/bundle
+
+# Ignore sensible configuration files
+/config/database.yml
+#/config/mailer.yml
+
+# Ignore application configuration
+/config/application.yml
+
+rails_best_practices_output*
+
+/config/hosts.yml
+faker.rb
