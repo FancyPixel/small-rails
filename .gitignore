@@ -32,15 +32,3 @@
 tags
 
 vendor/bundle
-
-# Ignore sensible configuration files
-/config/database.yml
-#/config/mailer.yml
-
-# Ignore application configuration
-/config/application.yml
-
-rails_best_practices_output*
-
-/config/hosts.yml
-faker.rb
