@@ -1,7 +1,7 @@
-#Small - Rails API
+# Small - Rails API
 This is a sample project used to illustrate the Flux architecture with React. Checkout the full article [here](http://fancypixel.github.io/blog/2015/01/28/react-plus-flux-backed-by-rails-api/)
 
-##Setup
+## Setup
 ```
 bundle install
 rake db:create
@@ -10,37 +10,37 @@ rake db:seed
 rails s
 ```
 
-##Consuming the API
+## Consuming the API
 
-####Signup - users#create
+#### Signup - users#create
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{"user": {"username": "testuser", "email": "test@example.com", "password": "12341234", "password_confirmation": "12341234"}}' http://localhost:3000/v1/users
 
 >> {"email":"test@example.com","username":"testuser","token_type":"Bearer","user_id":12,"access_token":"12:cccyXLZ7o_XpK6MxU_Bt"}
 ```
 
-####Login - sessions#create
+#### Login - sessions#create
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{"email": "test@example.com", "password": "12341234"}' http://localhost:3000/v1/login
 
 >> {"email":"test@example.com","username":"testuser","token_type":"Bearer","user_id":12,"access_token":"12:cccyXLZ7o_XpK6MxU_Bt"}
 ```
 
-####Create Story - stories#create
+#### Create Story - stories#create
 ```bash
 curl -X POST -H "Content-type: application/json" -H "Authorization: 12:cccyXLZ7o_XpK6MxU_Bt" -d '{ "story": { "title": "Test Title", "body": "blah blah blah blah blah blah blah" } }' http://localhost:3000/v1/stories
 
 >> {"story":{"title":"Test Title","body":"blah blah blah blah blah blah blah","created_at":"2015-08-20T19:43:07.701Z","abstract":"blah blah blah blah blah blah blah","id":11,"user":{"username":"testuser"}}}
 ```
 
-####Show Story - stories#show
+#### Show Story - stories#show
 ```bash
 curl -X GET -H "Content-type: application/json" -H "Authorization: 12:cccyXLZ7o_XpK6MxU_Bt" http://localhost:3000/v1/stories/11
 
 >> {"story":{"title":"Test Title","body":"blah blah blah blah blah blah blah","created_at":"2015-08-20T19:43:07.701Z","abstract":"blah blah blah blah blah blah blah","id":11,"user":{"username":"testuser"}}}
 ```
 
-####All Stories - stories#index
+#### All Stories - stories#index
 ```bash
 curl -X GET -H "Content-type: application/json" -H "Authorization: 12:cccyXLZ7o_XpK6MxU_Bt" http://localhost:3000/v1/stories/
 
@@ -48,7 +48,7 @@ curl -X GET -H "Content-type: application/json" -H "Authorization: 12:cccyXLZ7o_
 ```
 
 
-#MIT License
+# MIT License
 
 	Copyright (c) 2015 Fancy Pixel. All rights reserved.
 
